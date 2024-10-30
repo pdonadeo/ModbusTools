@@ -1,3 +1,6 @@
 #!/usr/bin/bash
-cmake --preset "Linux-Release"
-cmake --build --preset "Linux-Release"
+
+rm -Rf build
+mkdir build
+cmake --preset "Linux-Release" -B build -S .
+cmake --build --preset "Linux-Release" -j 24
